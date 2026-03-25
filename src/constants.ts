@@ -8,30 +8,30 @@ export const BHOPAL_THEMES: Theme[] = [
     problems: [
       {
         id: 'BPL-AI-01',
-        title: 'Predictive Maintenance for Industrial Machinery',
-        description: 'Develop an AI model that predicts equipment failure using sensor data to minimize downtime in manufacturing units.'
+        title: 'AI-Based Smart Waste Management System',
+        description: ''
       },
       {
         id: 'BPL-AI-02',
-        title: 'Automated Legal Document Summarizer',
-        description: 'Create an intelligent system that can summarize complex legal documents into plain language for common citizens.'
+        title: 'AI System for Fake News Detection',
+        description: ''
       }
     ]
   },
   {
-    id: 'mobility',
-    name: 'Smart Mobility, EVs & Logistics',
-    icon: 'Car',
+    id: 'smart-city',
+    name: 'Smart Cities, Urban Innovation & Disaster Management',
+    icon: 'Building2',
     problems: [
       {
-        id: 'BPL-SM-01',
-        title: 'Dynamic EV Charging Station Locator',
-        description: 'A real-time navigation system that suggests charging stations based on battery level, traffic, and queue length.'
+        id: 'BPL-SC-01',
+        title: 'Smart Traffic Monitoring System, Route Management',
+        description: ''
       },
       {
-        id: 'BPL-SM-02',
-        title: 'Last-Mile Delivery Optimization',
-        description: 'Algorithm-driven route optimization for delivery fleets in congested urban areas to reduce carbon footprint.'
+        id: 'BPL-SC-02',
+        title: 'AI System for Real-Time Car Recognition at Fixed Points Using Camera Video Feeds Addresses Critical Gaps in Traffic Monitoring',
+        description: ''
       }
     ]
   },
@@ -42,13 +42,13 @@ export const BHOPAL_THEMES: Theme[] = [
     problems: [
       {
         id: 'BPL-AG-01',
-        title: 'Precision Farming using IoT',
-        description: 'Low-cost IoT solution for soil moisture and nutrient monitoring to automate irrigation for small-scale farmers.'
+        title: 'AgriConnect App - Social Media App for Farmers',
+        description: ''
       },
       {
         id: 'BPL-AG-02',
-        title: 'Direct-to-Consumer Supply Chain',
-        description: 'A blockchain-based platform to connect farmers directly with urban consumers, eliminating middlemen.'
+        title: 'Pest Detection Software',
+        description: ''
       }
     ]
   },
@@ -59,13 +59,13 @@ export const BHOPAL_THEMES: Theme[] = [
     problems: [
       {
         id: 'BPL-APP-01',
-        title: 'Hyper-local Community Emergency Response',
-        description: 'A mobile app that connects volunteers with nearby emergency situations (medical, fire, etc.) before official help arrives.'
+        title: 'AI-Driven Marketing & GEO (Generative Engine Optimization) Focus Area (Tentative): Citation Tracking, LLM Visibility, Brand Sentiment',
+        description: ''
       },
       {
         id: 'BPL-APP-02',
-        title: 'AI-Powered Personal Learning Assistant',
-        description: 'An adaptive learning app that creates personalized study paths for students based on their strengths and weaknesses.'
+        title: 'Sustainable App Energy Drain Application',
+        description: ''
       }
     ]
   }
@@ -79,13 +79,13 @@ export const INDORE_THEMES: Theme[] = [
     problems: [
       {
         id: 'IND-CS-01',
-        title: 'Phishing Detection for Senior Citizens',
-        description: 'A browser extension or mobile tool that uses NLP to identify and block sophisticated phishing attempts in regional languages.'
+        title: 'Digitalization of Academic Degrees Using Blockchain Technology',
+        description: ''
       },
       {
         id: 'IND-CS-02',
-        title: 'Blockchain-based Academic Credentialing',
-        description: 'A secure system for universities to issue tamper-proof digital degrees and certificates.'
+        title: 'Blockchain-Based Registry to Make Land Records Tamper-Proof',
+        description: ''
       }
     ]
   },
@@ -96,30 +96,30 @@ export const INDORE_THEMES: Theme[] = [
     problems: [
       {
         id: 'IND-ROB-01',
-        title: 'Autonomous Warehouse Sorting Robot',
-        description: 'Design a prototype for a low-cost robot capable of navigating and sorting packages in a dynamic warehouse environment.'
+        title: 'Emergency Health Monitoring Wearable',
+        description: ''
       },
       {
         id: 'IND-ROB-02',
-        title: 'Drone-based Infrastructure Inspection',
-        description: 'Automated drone flight paths and image analysis for detecting cracks in bridges and high-rise buildings.'
+        title: 'Developing Remote-Controlled Robotic Soccer Bots with a Simple Mini Soccer Court',
+        description: ''
       }
     ]
   },
   {
-    id: 'smart-city',
+    id: 'smart-city-indore',
     name: 'Smart Cities, Urban Innovation & Disaster Management',
     icon: 'Building2',
     problems: [
       {
         id: 'IND-SC-01',
-        title: 'Smart Waste Segregation at Source',
-        description: 'AI-powered bin systems that automatically segregate dry, wet, and hazardous waste using computer vision.'
+        title: 'Intelligent Green-Corridor System for Emergency Vehicles',
+        description: ''
       },
       {
         id: 'IND-SC-02',
-        title: 'Flood Prediction & Early Warning System',
-        description: 'Using historical weather data and river levels to provide hyper-local flood warnings via SMS and sirens.'
+        title: 'Intelligent "Safe-Route" Navigator for Women & Vulnerable Groups',
+        description: ''
       }
     ]
   },
@@ -130,13 +130,13 @@ export const INDORE_THEMES: Theme[] = [
     problems: [
       {
         id: 'IND-HT-01',
-        title: 'Remote Patient Monitoring for Rural Areas',
-        description: 'Wearable devices that transmit vital signs via low-bandwidth networks to centralized health centers.'
+        title: 'Emergency Health Monitoring Wearable',
+        description: ''
       },
       {
         id: 'IND-HT-02',
-        title: 'AI-based Early Cancer Detection',
-        description: 'Computer vision models to assist radiologists in identifying early signs of cancer from X-rays and MRIs.'
+        title: 'AI-Based Early Health Risk Detection System',
+        description: ''
       }
     ]
   }

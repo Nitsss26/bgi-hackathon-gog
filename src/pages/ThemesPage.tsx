@@ -12,18 +12,18 @@ const themesData = [
         color: "text-blue-400",
         bg: "bg-blue-400/10",
         problems: [
-          "AI-Powered Predictive Maintenance for Industrial IoT Systems.",
-          "Intelligent Document Processing and Information Extraction for Legal/Medical Records."
+          "AI-Based Smart Waste Management System",
+          "AI System for Fake News Detection"
         ]
       },
       {
-        title: "Smart Mobility, EVs & Logistics",
-        icon: Car,
-        color: "text-green-400",
-        bg: "bg-green-400/10",
+        title: "Smart Cities, Urban Innovation & Disaster Management",
+        icon: Building,
+        color: "text-teal-400",
+        bg: "bg-teal-400/10",
         problems: [
-          "Smart Fleet Management and Real-time Route Optimization System.",
-          "EV Battery Health Monitoring and Predictive Degradation Analysis."
+          "Smart Traffic Monitoring System, Route Management",
+          "AI System for Real-Time Car Recognition at Fixed Points Using Camera Video Feeds Addresses Critical Gaps in Traffic Monitoring"
         ]
       },
       {
@@ -32,8 +32,8 @@ const themesData = [
         color: "text-yellow-400",
         bg: "bg-yellow-400/10",
         problems: [
-          "IoT-based Precision Irrigation and Soil Health Monitoring Platform.",
-          "Supply Chain Traceability for Agricultural Produce using Blockchain."
+          "AgriConnect App - Social Media App for Farmers",
+          "Pest Detection Software"
         ]
       },
       {
@@ -42,8 +42,8 @@ const themesData = [
         color: "text-purple-400",
         bg: "bg-purple-400/10",
         problems: [
-          "Gamified Financial Literacy App for Rural and Semi-urban Populations.",
-          "AI-driven Personal Health Assistant App for Elderly Care Management."
+          "AI-Driven Marketing & GEO (Generative Engine Optimization) Focus Area (Tentative): Citation Tracking, LLM Visibility, Brand Sentiment",
+          "Sustainable App Energy Drain Application"
         ]
       }
     ]
@@ -58,8 +58,8 @@ const themesData = [
         color: "text-red-400",
         bg: "bg-red-400/10",
         problems: [
-          "Decentralized Identity Verification System for Secure Access.",
-          "AI-based Phishing Detection and Prevention Browser Extension."
+          "Digitalization of Academic Degrees Using Blockchain Technology",
+          "Blockchain-Based Registry to Make Land Records Tamper-Proof"
         ]
       },
       {
@@ -68,18 +68,18 @@ const themesData = [
         color: "text-orange-400",
         bg: "bg-orange-400/10",
         problems: [
-          "Autonomous Drone Navigation for Warehouse Inventory Management.",
-          "Collaborative Robot (Cobot) Interface for Safe Assembly Line Operations."
+          "Emergency Health Monitoring Wearable",
+          "Developing Remote-Controlled Robotic Soccer Bots with a Simple Mini Soccer Court"
         ]
       },
       {
-        title: "Smart Cities, Urban Innovation & Disaster Mgmt",
+        title: "Smart Cities, Urban Innovation & Disaster Management",
         icon: Building,
         color: "text-teal-400",
         bg: "bg-teal-400/10",
         problems: [
-          "Real-time Urban Flood Prediction and Early Warning Alert System.",
-          "Smart Waste Management and Collection Route Optimization."
+          "Intelligent Green-Corridor System for Emergency Vehicles",
+          "Intelligent \"Safe-Route\" Navigator for Women & Vulnerable Groups"
         ]
       },
       {
@@ -88,8 +88,8 @@ const themesData = [
         color: "text-pink-400",
         bg: "bg-pink-400/10",
         problems: [
-          "Telemedicine Platform with Integrated AI Pre-Diagnostics.",
-          "Wearable Device Data Aggregation for Chronic Disease Management."
+          "Emergency Health Monitoring Wearable",
+          "AI-Based Early Health Risk Detection System"
         ]
       }
     ]

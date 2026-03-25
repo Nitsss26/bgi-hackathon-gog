@@ -99,10 +99,10 @@ export function Footer() {
             © 2026 <span className="text-white font-bold">Bansal Group of Institutes</span>. All rights reserved.
           </div>
           
-          <div className="flex items-center gap-2 text-slate-400 text-sm font-medium md:flex-1 justify-center">
+          <div className="flex items-center gap-1.5 text-slate-400 text-sm font-medium md:flex-1 justify-center">
             Made with <span className="text-red-500">❤️</span> by
-            <a href="https://geeksofgurukul.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center hover:scale-105 transition-transform">
-              <img src="https://www.credentialverification-bu.in/GoG.png" alt="Geeks of Gurukul" className="h-6 w-auto object-contain" referrerPolicy="no-referrer" />
+            <a href="https://geeksofgurukul.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors font-bold ml-0.5">
+              Geeks of Gurukul Team
             </a>
           </div>
 

@@ -95,10 +95,18 @@ export function Footer() {
         
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-slate-500 text-sm font-medium">
+          <div className="text-slate-500 text-sm font-medium md:flex-1">
             © 2026 <span className="text-white font-bold">Bansal Group of Institutes</span>. All rights reserved.
           </div>
-          <div className="flex gap-10 text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">
+          
+          <div className="flex items-center gap-2 text-slate-400 text-sm font-medium md:flex-1 justify-center">
+            Made with <span className="text-red-500">❤️</span> by
+            <a href="https://geeksofgurukul.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center hover:scale-105 transition-transform">
+              <img src="https://www.credentialverification-bu.in/GoG.png" alt="Geeks of Gurukul" className="h-6 w-auto object-contain" referrerPolicy="no-referrer" />
+            </a>
+          </div>
+
+          <div className="flex gap-6 text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 md:flex-1 justify-end">
             <a href="#" className="hover:text-white transition-colors flex items-center gap-2 group">
               Privacy Policy <ExternalLink size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
             </a>

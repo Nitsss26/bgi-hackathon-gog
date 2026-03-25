@@ -2,27 +2,20 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { CheckCircle2, ChevronRight, Loader2, ShieldCheck, Mail, Smartphone, Users, FileText, CreditCard } from 'lucide-react';
 
-const THEMES = [
-  "Smart Education",
-  "Healthcare & Biomedical Devices",
-  "Agriculture & Rural Development",
-  "Smart Automation",
-  "Clean & Green Technology",
-  "Disaster Management",
-  "Smart Vehicles",
-  "Blockchain & Cybersecurity"
-];
+import { BHOPAL_THEMES, INDORE_THEMES, VENUES } from '../constants';
 
-const PROBLEM_STATEMENTS: Record<string, string[]> = {
-  "Smart Education": ["AI-based personalized learning", "Virtual labs for remote areas"],
-  "Healthcare & Biomedical Devices": ["Low-cost diagnostic tools", "Remote patient monitoring"],
-  "Agriculture & Rural Development": ["Smart irrigation systems", "Crop disease prediction"],
-  "Smart Automation": ["Home automation for elderly", "Industrial IoT solutions"],
-  "Clean & Green Technology": ["Waste management optimization", "Renewable energy tracking"],
-  "Disaster Management": ["Early warning systems", "Resource allocation during crisis"],
-  "Smart Vehicles": ["Traffic flow optimization", "EV battery management"],
-  "Blockchain & Cybersecurity": ["Secure voting system", "Fake news detection"]
-};
+const ALL_THEMES = [...BHOPAL_THEMES, ...INDORE_THEMES];
+const UNIQUE_THEME_NAMES = Array.from(new Set(ALL_THEMES.map(t => t.name)));
+
+const THEME_PROBLEMS: Record<string, { id: string, title: string }[]> = {};
+ALL_THEMES.forEach(t => {
+  if (!THEME_PROBLEMS[t.name]) THEME_PROBLEMS[t.name] = [];
+  t.problems.forEach(p => {
+    if (!THEME_PROBLEMS[t.name].find(tp => tp.title === p.title)) {
+      THEME_PROBLEMS[t.name].push({ id: p.id, title: p.title });
+    }
+  });
+});
 
 export function RegisterPage() {
   const [step, setStep] = useState(1);
@@ -40,6 +33,7 @@ export function RegisterPage() {
   const [otps, setOtps] = useState({ email: "", mobile: "" });
   const [otpSent, setOtpSent] = useState(false);
   const [otpVerified, setOtpVerified] = useState(false);
+  const [verificationToken, setVerificationToken] = useState("");
   
   const [members, setMembers] = useState([{ name: "", institute: "", degree: "", enrollment: "", dob: "" }]);
   
@@ -56,10 +50,12 @@ export function RegisterPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: leader.email })
       });
-      if (res.ok) {
+      const data = await res.json();
+      if (res.ok && data.token) {
+        setVerificationToken(data.token);
         setOtpSent(true);
       } else {
-        setError("Failed to send OTP. Please try again.");
+        setError(data.error || "Failed to send OTP. Please try again.");
       }
     } catch (err) {
       setError("Network error. Please try again.");
@@ -78,13 +74,19 @@ export function RegisterPage() {
       const res = await fetch('/api/verify-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: leader.email, emailOtp: otps.email, mobileOtp: otps.mobile })
+        body: JSON.stringify({ 
+          email: leader.email, 
+          emailOtp: otps.email, 
+          mobileOtp: otps.mobile,
+          token: verificationToken
+        })
       });
+      const data = await res.json();
       if (res.ok) {
         setOtpVerified(true);
         setStep(3);
       } else {
-        setError("Invalid OTPs. Please check and try again.");
+        setError(data.error || "Invalid OTPs. Please check and try again.");
       }
     } catch (err) {
       setError("Network error. Please try again.");
@@ -108,11 +110,12 @@ export function RegisterPage() {
           projectDetails: { theme, problemStatement }
         })
       });
+      const data = await res.json();
       
       if (res.ok) {
         setStep(5); // Success
       } else {
-        setError("Registration failed. Please try again.");
+        setError(data.error || "Registration failed. Please try again.");
       }
     } catch (err) {
       setError("Network error. Please try again.");
@@ -192,7 +195,7 @@ export function RegisterPage() {
                   onChange={(e) => { setTheme(e.target.value); setProblemStatement(""); }}
                 >
                   <option value="">-- Select a Theme --</option>
-                  {THEMES.map(t => <option key={t} value={t}>{t}</option>)}
+                  {UNIQUE_THEME_NAMES.map(t => <option key={t} value={t}>{t}</option>)}
                 </select>
               </div>
 
@@ -205,7 +208,7 @@ export function RegisterPage() {
                     onChange={(e) => setProblemStatement(e.target.value)}
                   >
                     <option value="">-- Select Problem Statement --</option>
-                    {PROBLEM_STATEMENTS[theme]?.map(p => <option key={p} value={p}>{p}</option>)}
+                    {THEME_PROBLEMS[theme]?.map(p => <option key={p.id} value={p.title}>{p.title}</option>)}
                   </select>
                 </div>
               )}

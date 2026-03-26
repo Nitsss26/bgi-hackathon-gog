@@ -7,9 +7,9 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 
-import slide1 from '../pages/Gemini_Generated_Image_46h5g846h5g846h5.png';
-import slide2 from '../pages/Gemini_Generated_Image_9vr0az9vr0az9vr0.png';
-import slide3 from '../pages/Gemini_Generated_Image_oxmyxaoxmyxaoxmy.png';
+import slide1 from '../pages/1.png';
+import slide2 from '../pages/2.png';
+import slide3 from '../pages/3.png';
 
 const heroSlides = [
   { image: slide1 },
